@@ -1,84 +1,84 @@
-import React from 'react'
-import './portfolio.css'
-import Image1 from '../../assets/Image1.png'
-import Image2 from '../../assets/Image2.png'
-import Image3 from '../../assets/Image3.png'
-import Image4 from '../../assets/Image4.png'
-import Image5 from '../../assets/Image5.png'
-import Image6 from '../../assets/Image6.png'
+import React from "react";
+import "./portfolio.css";
+import Image1 from "../../assets/chat.jpg";
+import Image2 from "../../assets/store.png";
+import Image3 from "../../assets/weathrt.png";
+import Image4 from "../../assets/todolist.png";
+import Image5 from "../../assets/Image5.png";
+import Image6 from "../../assets/Image6.png";
 
 const data = [
   {
-      id:1,
-      image:Image1,
-      title:"Orion UI kit - Charts templates & infographics in Figma",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103678-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
+    id: 1,
+    image: Image1,
+    title: "Rozany Chat",
+    github: "https://github.com/JimyRozany/rozany-chat",
+    demo: "https://rozany-chat.netlify.app",
   },
   {
-      id:2,
-      image:Image2,
-      title:"Eclipse - Figma dashboard UI kit for data design web apps",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103793-Orion-UI-kit-Charts-templates-infographics-in-Figma",
+    id: 2,
+    image: Image2,
+    title: "Echo Store",
+    github: "https://github.com/JimyRozany/eco-store",
+    demo: "https://my-eco-store.netlify.app/",
   },
   {
-      id:3,
-      image:Image3,
-      title:"Orion UI kit - Charts templates & infographics in Figma",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103686-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
+    id: 3,
+    image: Image3,
+    title: "Weather",
+    github: "https://github.com/JimyRozany/weather",
+    demo: "https://palestine-weather-app.netlify.app/",
   },
   {
-      id:4,
-      image:Image4,
-      title:"Eclipse - Figma dashboard UI kit for data design web apps",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103837-Orion-UI-kit-Charts-templates-infographics-in-Figma",
+    id: 4,
+    image: Image4,
+    title: "Todo List",
+    github: "https://github.com/JimyRozany/todo_list",
+    demo: "https://my-app-todolist.netlify.app/",
   },
   {
-      id:5,
-      image:Image5,
-      title:"Orion UI kit - Charts templates & infographics in Figma",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103695-Eclipse-Figma-dashboard-UI-kit-for-data-design-web-apps",
+    id: 5,
+    image: Image5,
+    title: "Courses (API)",
+    github: "https://github.com/JimyRozany/courses_api",
+    demo: "#",
   },
   {
-      id:6,
-      image:Image6,
-      title:"Eclipse - Figma dashboard UI kit for data design web apps",
-      github:"https://github.com",
-      demo:"https://dribbble.com/shots/19103845-Orion-UI-kit-Charts-templates-infographics-in-Figma",
+    id: 6,
+    image: Image6,
+    title: "Ecommerce web App",
+    github: "https://github.com/JimyRozany/ecommerce",
+    demo: "#",
   },
 ];
 
-
-
 const Portfolio = () => {
   return (
-    <section id='portfolio'>
+    <section id="portfolio">
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
       <div className="container portfolio__container">
-      {
-        data.map(({id,image,title,github,demo})=>{
-          return(
+        {data.map(({ id, image, title, github, demo }) => {
+          return (
             <article key={id} className="portfolio__item">
               <div className="portfolio__item-image">
                 <img src={image} alt={title} />
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
-                <a href={github} className="btn" target="_blank">Github</a>
-                <a href={demo} className="btn btn-primary" target="_blank">Live Demo</a>
+                <a href={github} className="btn" target="_blank">
+                  Github
+                </a>
+                <a href={demo} className="btn btn-primary" target="_blank">
+                  Live Demo
+                </a>
               </div>
             </article>
-          )
-        })
-      }
+          );
+        })}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;
